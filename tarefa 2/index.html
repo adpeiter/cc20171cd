@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CHAT</title>
+		<meta http-equiv="Content-Language" content="pt-br">
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+	</head>
+	<body>
+		<div>
+			<div class="full_width">
+				<h1>Histórico de mensagens</h1>
+			</div>
+			<div class="full_width">
+			 <table>
+			    <thead>
+			      <tr>
+			        <th>Usuário</th>
+			        <th>Mensagem</th>
+					<th>Hora</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			    	%for (usuario, mensagem, hora) in mensagens:
+					    <tr>
+					    	<td>{{usuario}}</td>
+					    	<td>{{mensagem}}</td>
+							<td>{{hora}}</td>
+						</tr>
+					%end
+			    </tbody>
+			  </table>
+			  </div>
+			  <div class="full_width">
+					<a href="escrever_mensagem"><input type="button" value="Escrever" /></a>
+				</div>
+		</div>
+	</body>
+</html>
